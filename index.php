@@ -161,9 +161,9 @@ session_start();
             <p class="lead text-muted">Book your summer holidays with us now.</p>
             <p>
                 <?php if ($isSessionExists) { ?>
-                <a href="#" class="btn btn-success my-2" data-toggle="modal" data-target=".book-now-modal-lg">Book now<i class="fas fa-angle-double-right ml-1"></i></a>
+                <a href="#" class="btn btn-success my-2" data-toggle="modal" data-target=".book-now-modal-lg">PESAN SEKARANG<i class="fas fa-angle-double-right ml-1"></i></a>
                 <?php } else { ?>
-                <a href="#" class="btn btn-success my-2" data-toggle="modal" data-target=".sign-in-to-book-modal">Book now<i class="fas fa-angle-double-right ml-1"></i></a>
+                <a href="#" class="btn btn-success my-2" data-toggle="modal" data-target=".sign-in-to-book-modal">PESAN SEKARANG<i class="fas fa-angle-double-right ml-1"></i></a>
                 <?php } ?>
             </p>
         </div>
