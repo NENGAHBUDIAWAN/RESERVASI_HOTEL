@@ -15,7 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["submitBtn"])) {
         $errors_ .= Util::displayAlertV1("Masukkan Email telebih dahulu.", "warning");
     }
     if (strlen($_POST["password"]) < 4 || strlen($_POST["password2"]) < 4) {
-        $errors_ .= Util::displayAlertV1("Password minimal 4 karakter", "warning");
+        $errors_ .= Util::displayAlertV1("Password minimal 4 karakter ", "warning");
     }
     if (!empty($_POST["password"]) && !empty($_POST["password2"])) {
         if ($_POST["password"] != $_POST["password2"]) {
