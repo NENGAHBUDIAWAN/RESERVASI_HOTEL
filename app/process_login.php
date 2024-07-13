@@ -25,10 +25,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["submitBtn"])) {
     $errors_ = null;
 
     if (!filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)) {
-        $errors_ .= Util::displayAlertV1("Please enter a valid email address", "warning");
+        $errors_ .= Util::displayAlertV1("Tolong masukkan Email Anda", "warning");
     }
     if (empty($_POST["password"])) {
-        $errors_ .= Util::displayAlertV1("Password is required.", "warning");
+        $errors_ .= Util::displayAlertV1("Masukkan Password.", "warning");
     }
     if (!empty($errors_)) {
         echo $errors_;
@@ -42,7 +42,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["submitBtn"])) {
         $isAdmin = $handler->handleIsAdmin($_POST["email"]);
 
         if (!$handler->isPasswordMatchWithEmail($_POST['password'], $customer)) {
-            echo Util::displayAlertV1("Incorrect password.", "warning");
+            echo Util::displayAlertV1("Password salah.", "warning");
         } else {
             if ($isAdmin) { 
                 $_SESSION["username"] = $_POST["email"];
